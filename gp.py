@@ -1,10 +1,10 @@
-import cg_gp as cg
+import cal_gp as cg
 print('\t\tThis Is A Program For cgculating Total cgPA')          
 cg.cont()
 while True:
     try:    
         con_qu= int(input('''You have come to end of the program. 
-To cgculate another cgPA press 1, To Quit the program press 0: '''))
+To calculate another CGPA press 1, To Quit the program press 0: '''))
         if con_qu is 1:
             cg.cont()
         elif con_qu is 0:
