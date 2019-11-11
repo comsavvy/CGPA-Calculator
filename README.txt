@@ -11,6 +11,7 @@ This is a program for calculating the Total CPGA of each semester of a student.
 
 3. Once the program has reached the end, the program will gives both GRADE and the GRADE STATUS with advice to the student.
 
+4. And also gives the barchat of each course grade
 
                         CONCLUSION
 And also, the programmer that build this program has built it in a way that the program will run smoothly. Once you type in unrequire value, the program will still allow you start again without re-running it.  
