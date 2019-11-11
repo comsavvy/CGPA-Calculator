@@ -14,12 +14,21 @@ def Advice(gp):
         print('You pass through school')
 
 def gp_visual(display, total_courses):
-    plt.hist(display, bins= total_courses)
+    A= 5
+    B= 4
+    C= 3
+    D= 2
+    E= 1
+    F= 0
+    plt.plot(display, total_courses)
+    plt.xlabel(['A', 'B', 'C', 'D', 'E', 'F'])
+    plt.ylabel(0, 1, 2, 3, 4, 5)
+    
 
 
-def gp_bar(course):
+def gp_bar(grade):
     output = []
-    output.append(course)
+    output.append(grade)
     return output
     
     
@@ -49,16 +58,17 @@ def Score(total_unit, total_courses):
                     else:
                         print('Invalid Grade')
                         break
-                    gp_bar(course)
+                    gp_bar(grade)
                     increment+= 1  
                     unit_counter += unit
                     result += course
                 if total_unit == unit_counter:
                     gp = result / total_unit
                     print(f"Grade: {round(gp, 3)}")
-                    display= gp_bar(course)
+                    display= gp_bar(grade)
                     Advice(gp)
                     gp_visual(display, total_courses)
+                                  
                 else:
                     print('Unit not balance')
             except ValueError:
