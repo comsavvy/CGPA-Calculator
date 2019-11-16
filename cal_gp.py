@@ -18,7 +18,7 @@ def Score(total_unit, total_courses):
         if total_unit is not 0:
             try:
                 while increment <= total_courses:
-                    grade= (input(f"Grade_{increment}: ").upper())
+                    grade= input(f"Grade_{increment}: ").upper()
                     unit= int(input(f"Course_{increment} unit: "))
                     print("\n")
                     if grade == 'A':
