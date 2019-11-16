@@ -21,8 +21,6 @@ if __name__ == "__main__":
     request(data)
     occurence= input('Do you want to see the number of Instances of your Grades occurence in CountPlot? ').lower()
     showPlot(occurence)
-
-
     while True:
         try:
             con_qu= int(input('''You have come to end of the program. 
