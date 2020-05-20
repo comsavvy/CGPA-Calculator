@@ -23,7 +23,7 @@ class G4:
             course= 0
             unit_counter=0
             increment= 1
-            if total_unit is not 0:
+            if total_unit != 0:
                 try:
                     while increment <= total_courses:
                         grade= (input(f"Grade_{increment}: ").upper())
@@ -64,7 +64,7 @@ class G4:
                     if total_unit == unit_counter:
                         gp = result / total_unit
                         print(f"Grade: {round(gp, 3)}")
-                        advice(gp)    
+                        self.advice(gp)    
                     else:
                         print('Unit not balance')
                 except ValueError:
@@ -86,6 +86,11 @@ class G4:
             print('Value Error')
             
     def dataFrame(self):
-        df= pd.DataFrame(gradde)
-        
-        
+        df= pd.DataFrame(self.gradde)
+        return df
+    
+    def showFrame(self, data):
+        if data == 'Y':
+            self.dataFrame()
+        else: 
+            pass

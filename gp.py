@@ -1,13 +1,17 @@
-from cal_gp import G4 as cg
-print('\t\tThis Is A Program For cgculating Total CGPA')          
+from cal_gp import G4
+cg= G4()
+print('\t\tThis Is A Program For Calculating Total CGPA')          
 cg.cont()
+data = input('Do you want to see the DataFrame of your Score: ').capitalize()
+cg.showFrame(data)
 while True:
     try:    
         con_qu= int(input('''You have come to end of the program. 
 To calculate another CGPA press 1, To Quit the program press 0: '''))
-        if con_qu is 1:
+        if con_qu == 1:
             cg.cont()
-        elif con_qu is 0:
+            data
+        elif con_qu == 0:
             print('Quit🤞')
             break
         else:
