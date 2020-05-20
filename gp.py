@@ -1,5 +1,5 @@
-import cal_gp as cg
-print('\t\tThis Is A Program For cgculating Total cgPA')          
+from cal_gp import G4 as cg
+print('\t\tThis Is A Program For cgculating Total CGPA')          
 cg.cont()
 while True:
     try:    
