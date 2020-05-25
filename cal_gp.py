@@ -101,7 +101,7 @@ class G4:
         else:
             print('Total Unit can not be zero!')
 
-    def __p(self):
+    def start(self):
         try:
             total_unit= int(input("Total Unit: "))
             total_courses= int(input("Total Courses: "))

@@ -34,4 +34,4 @@ To calculate another CGPA press 1, To Quit the program press 0: '''))
             print('Quit🤞')
             break
     except ValueError:
-        print('Check the input')                
+        print('Check the input')
