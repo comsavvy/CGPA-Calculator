@@ -33,7 +33,5 @@ To calculate another CGPA press 1, To Quit the program press 0: '''))
         elif con_qu == 0:
             print('Quit🤞')
             break
-        else:
-            print('ValueError!')
     except ValueError:
         print('Check the input')                

@@ -1,18 +1,16 @@
-
 """
 This module can be used to calculate the total CGPA of a student per each semester
-
 """
-# Importing the necessary Libraries to use
+# Importing the necessary Libraries to use  
 import pandas as pd
 import seaborn as sns
 class G4:
     """
     This contains alot of fuctions such as:
-    o __advice
+    o _advice
     o _Score
     o start (This is where other methods are executed)
-    o __dataFrame(This will create the DataFrame of all the data you've inputted)    
+    o _dataFrame(This will create the DataFrame of all the data you've inputted)    
     o showdataframe (This allows you to see the DataFrame of the data)
     
     Out of all the listed functions, those that're mearnt to be call are:
@@ -24,7 +22,7 @@ class G4:
         self.holder= {'Grade': [],
              'GradePoint': [],
              'Unit': []}
-    def __advice(self, gp):
+    def _advice(self, gp):
         """
         This is going to return Advice on the performance of the Student
         
@@ -40,7 +38,7 @@ class G4:
         else:
             print('Certificate of attendance')
 
-    def __score(self, total_unit, total_courses):
+    def _score(self, total_unit, total_courses):
         """
         You don't need to call this function, it a special method to be call only 
         by `Start' method
@@ -91,7 +89,7 @@ class G4:
                 if total_unit == unit_counter:
                     gp = result / total_unit
                     print(f"Grade: {round(gp, 3)}")
-                    self.__advice(gp)    
+                    self._advice(gp)    
                 else:
                     print('Unit not balance')
             except ValueError:
@@ -103,16 +101,16 @@ class G4:
         else:
             print('Total Unit can not be zero!')
 
-    def start(self):
+    def __p(self):
         try:
             total_unit= int(input("Total Unit: "))
             total_courses= int(input("Total Courses: "))
             print("\n")
-            self.__score(total_unit, total_courses)
+            self._score(total_unit, total_courses)
         except ValueError:
             print('Value Error')
             
-    def __dataFrame(self):
+    def _dataFrame(self):
         """
         You don't need to call this function it going to generate dataframe
         for showdataframe method
@@ -124,7 +122,7 @@ class G4:
         """
         This method allow you to view the DataFrame of your inputted data
         """
-        df= self.__dataFrame()
+        df= self._dataFrame()
         return df
         
     def showcountplot(self):
@@ -132,6 +130,6 @@ class G4:
         This method is going to generate the number of instances a grade occur.
         But plot will only generate when you close the program.
         """
-        df= self.__dataFrame()
+        df= self._dataFrame()
         sns.countplot(data= df, x= 'Grade')
         
