@@ -1,5 +1,5 @@
 # ABOUT
-*This is a program for `calculating`  the `Total CPGA` of each semester of a student.*
+*This is a program for `calculating`  the `Total CPGA` of each semester of a student in the university of Ilorin.*
 ## HOW IT WORKS                    
 1. It will firstly ask the student to enter both `Total Courses` and `Total Unit` for that semester.
 
