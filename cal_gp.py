@@ -54,7 +54,7 @@ class G4:
         if total_unit != 0:
             try:
                 while increment <= total_courses:
-                    grade= (input(f"Grade_{increment}: ").upper())
+                    grade= input(f"Grade_{increment}: ").upper()
                     self.holder['Grade'].append(grade)
                     unit= int(input(f"Course_{increment} unit: "))
                     self.holder['Unit'].append(unit)
