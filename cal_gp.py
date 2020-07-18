@@ -4,6 +4,8 @@ This module can be used to calculate the total CGPA of a student per each semest
 # Importing the necessary Libraries to use  
 import pandas as pd
 import seaborn as sns
+import matplotlib.pyplot as plt
+
 class G4:
     """
     This contains alot of fuctions such as:
@@ -16,6 +18,7 @@ class G4:
     Out of all the listed functions, those that're mearnt to be call are:
     - start
     - Showdataframe
+    _ Showcountplot
     
     """
     def __init__(self):
@@ -51,7 +54,7 @@ class G4:
         if total_unit != 0:
             try:
                 while increment <= total_courses:
-                    grade= (input(f"Grade_{increment}: ").upper())
+                    grade= input(f"Grade_{increment}: ").upper()
                     self.holder['Grade'].append(grade)
                     unit= int(input(f"Course_{increment} unit: "))
                     self.holder['Unit'].append(unit)
@@ -132,4 +135,4 @@ class G4:
         """
         df= self._dataFrame()
         sns.countplot(data= df, x= 'Grade')
-        
+        plt.show()
