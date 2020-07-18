@@ -3,7 +3,10 @@ cg= G4()
 
 def showPlot(occurence):
     if occurence.startswith('y'):
-        cg.showcountplot()
+        try:
+            cg.showcountplot()
+        except Exception as e:
+            print(f"Error occur because: {e}")
     else:
         pass
 
