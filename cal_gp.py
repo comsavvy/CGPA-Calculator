@@ -135,4 +135,4 @@ class G4:
         """
         df= self._dataFrame()
         sns.countplot(data= df, x= 'Grade')
-        plt.show()
+        plt.show() 
