@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 from cal_gp import G4
+import pandas as pd
 
 
 """
@@ -38,14 +39,16 @@ class Flow:
         self.showPlot(occurrence)
 
     def execute(self):
-        print("\t\tThis Is A Program For Calculating Total CGPA")
         self.cg.start()
         self.printingTask()
+
+    def executeRepeat(self):
+        self.execute()
         while True:
             try:
                 con_qu = int(
                     input(
-                        """You have come to end of the program. 
+                        """You have come to end of the program.
 To calculate another CGPA press 1, To Quit the program press 0: """
                     )
                 )
@@ -59,6 +62,29 @@ To calculate another CGPA press 1, To Quit the program press 0: """
                 print("Check the input")
 
 
+class Users:
+    def __init__(self):
+        self.names = {}
+
+    def differentUsers(self):
+        next = True
+        while next:
+            user = input("Enter username: ").title()
+            flow = Flow()
+            flow.execute()
+            self.names[user] = flow.cg.gp
+            next = input("Next user [y/n]: ").lower().startswith("y")
+
+    def usersGP(self):
+        return pd.DataFrame(self.names.items(), columns=["Username", "Gp"])
+
+
+def main():
+    print("\t\tThis Is A Program For Calculating Total CGPA")
+    users = Users()
+    users.differentUsers()
+    print(users.usersGP())
+
+
 if __name__ == "__main__":
-    flow = Flow()
-    flow.execute()
+    main()
