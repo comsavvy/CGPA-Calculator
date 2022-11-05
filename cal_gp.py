@@ -93,7 +93,7 @@ class G4:
                     result += course
                 if total_unit == unit_counter:
                     self.gp = result / total_unit
-                    print(f"Grade: {round(gp, 3)}")
+                    print(f"Grade: {round(self.gp, 3)}")
                     self._advice(self.gp)
                 else:
                     print("Unit not balance")
